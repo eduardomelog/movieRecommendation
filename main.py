@@ -45,7 +45,8 @@ tab1, tab2 = st.tabs(["Content Based Model", "Pestaña 2"])
 with tab1:
     movie = st.selectbox('Select a movie', sorted(df2['title']))
     if st.button('Recommend Movie'):
-        st.write(get_recommendations(movie)['title'])
+        df = get_recommendations(movie)
+        st.write(df)
 
 
 # Contenido de la Pestaña 2
