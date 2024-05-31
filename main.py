@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
+
+# FIRST PAGE
 similarity_matrix = np.load('similarity_matrix.npy')
 indices = pd.read_pickle('indices.pkl')
 df2 = pd.DataFrame(indices).reset_index()
@@ -30,6 +32,10 @@ def get_recommendations(title, cosine_sim=similarity_matrix):
 
 
 
+
+
+
+# APP DEPLOYMENT
 st.title("Movie Recommendation Models")
 
 # Crea las pestañas
@@ -39,7 +45,7 @@ tab1, tab2 = st.tabs(["Content Based Model", "Pestaña 2"])
 with tab1:
     movie = st.selectbox('Select a movie', sorted(df2['title']))
     if st.button('Recommend Movie'):
-        st.write(get_recommendations(movie))
+        st.write(get_recommendations(movie)['title'])
 
 
 # Contenido de la Pestaña 2
