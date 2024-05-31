@@ -62,13 +62,18 @@ def get_recommendations2(title, cosine_sim=similarity_matrix):
 # APP DEPLOYMENT
 st.title("Movie Recommendation Models")
 
+st.image('movies.jpg',
+        #style = 'display: block; margin:auto;'
+             )
+
 # Crea las pestañas
 tab1, tab2 = st.tabs(["Content Based Model", "Pestaña 2"])
 
 # Contenido de la Pestaña 1
 with tab1:
+    st.write('This model was made using the cosine similarity between some movie features such as the review, cast, gender and director.')
     movie = st.selectbox('Select a movie', sorted(df2['title']))
-    if st.button('Recommend Movie'):
+    if st.button('Recommend Movies'):
         df = get_recommendations2(movie)
         st.write(df)
         
