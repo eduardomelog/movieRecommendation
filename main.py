@@ -56,9 +56,6 @@ def get_recommendations2(title, cosine_sim=similarity_matrix):
 
 
 
-
-
-
 # APP DEPLOYMENT
 st.title("Movie Recommendation Models")
 
@@ -83,3 +80,4 @@ with tab2:
     st.header("Bienvenido a la Pestaña 2")
     st.write("Este es el contenido de la segunda pestaña.")
     st.line_chart({"data": [1, 5, 2, 6, 8, 3]})
+    
