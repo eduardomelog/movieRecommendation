@@ -30,7 +30,7 @@ def get_recommendations(title, cosine_sim=similarity_matrix):
 
 
 
-st.title("Movie Recommendation Apps")
+st.title("Movie Recommendation Models")
 
 # Crea las pestañas
 tab1, tab2 = st.tabs(["Content Based Model", "Pestaña 2"])
@@ -39,7 +39,7 @@ tab1, tab2 = st.tabs(["Content Based Model", "Pestaña 2"])
 with tab1:
     movie = st.selectbox('Select a movie', sorted(df2['title']))
     if st.button('Recommend Movie'):
-    st.write(get_recommendations(movie))
+        st.write(get_recommendations(movie))
 
 
 # Contenido de la Pestaña 2
