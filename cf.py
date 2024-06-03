@@ -28,7 +28,9 @@ def recomendacion (uid):
   recomendaciones = recomendaciones.merge(lista_no_vistos).sort_values(by='rating_est', ascending=False)
   return recomendaciones.head(5)
 
-recomendacion(1)
+
+
+st.write(recomendacion(1))
 
 
 
