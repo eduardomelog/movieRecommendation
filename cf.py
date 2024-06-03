@@ -5,7 +5,7 @@ import streamlit as st
 from surprise import Reader, Dataset, SVD
 from surprise.model_selection import cross_validate
 reader = Reader()
-ratings = pd.read_csv(root + 'ratings.csv')
+ratings = pd.read_csv('ratings.csv')
 ratings.head()
 
 data = Dataset.load_from_df(ratings[['userId', 'movieId', 'rating']], reader)
