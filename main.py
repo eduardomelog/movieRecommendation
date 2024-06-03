@@ -123,5 +123,6 @@ with tab2:
         df = df[['original_title', 'rating_est']]
         df.columns = ['Title', 'Score']
         df.index = [1,2,3,4,5]
+        st.write('Movies that this user must watch:')
         st.write(df)
     
