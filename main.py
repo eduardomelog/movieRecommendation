@@ -112,6 +112,6 @@ with tab1:
 
 # Contenido de la Pestaña 2
 with tab2:
-    st.header("Bienvenido a la Pestaña 2")
+    st.header("This model....")
     st.write(recomendacion(1))
     
