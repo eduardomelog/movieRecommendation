@@ -62,6 +62,7 @@ from surprise import Reader, Dataset, SVD
 from surprise.model_selection import cross_validate
 reader = Reader()
 ratings = pd.read_csv('ratings.csv')
+ratings = ratings[ratings['original_title'].str.contains(r'^[a-zA-Z0-9 ]*$', na=False)]
 ratings.head()
 
 data = Dataset.load_from_df(ratings[['userId', 'movieId', 'rating']], reader)
