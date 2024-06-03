@@ -112,6 +112,8 @@ with tab1:
 
 # Contenido de la Pestaña 2
 with tab2:
-    st.header("This model....")
-    st.write(recomendacion(1))
+    userid = st.selectbox('Select an user ID', range(1,80))
+    if st.button('Recommend Movies '):
+        df = recomendacion(userid)
+        st.write(df)
     
