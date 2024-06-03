@@ -114,7 +114,9 @@ with tab1:
 with tab2:
     userid = st.selectbox('Select an user ID', range(1,80))
     if st.button('Recommend Movies '):
-        st.write(ratings[ratings['userId'] == userid])
+        watched_movies = ratings[ratings['userId'] == userid].sort_values(['rating'], ascending = False)
+        st.write('Watched movies by this user:')
+        st.write(watched_movies)
         
         df = recomendacion(userid)
         df = df[['original_title', 'rating_est']]
