@@ -104,7 +104,6 @@ tab1, tab2 = st.tabs(["Content Based Model", "Collaborative Filtering"])
 
 # Contenido de la Pestaña 1
 with tab1:
-    st.header('This model was made using the cosine similarity between some movie features such as the review, cast, gender and director.')
     movie = st.selectbox('Select a movie', sorted(df2['title']))
     if st.button('Recommend Movies'):
         df = get_recommendations2(movie)
