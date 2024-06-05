@@ -94,6 +94,8 @@ def recomendacion (uid):
 
 # APP DEPLOYMENT
 st.title("Movie Recommendation Models")
+st.markdown(f'###### [Click here to go to the GitHub repository.](https://github.com/eduardomelog/movieRecommendation)')
+
 
 st.image('movies.jpg',
         #style = 'display: block; margin:auto;'
