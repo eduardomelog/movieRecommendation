@@ -10,7 +10,7 @@ Welcome to **Movie Recommendation App.** This project was made for estimate whic
 ## Technical context:
 **Content Based:** this model was developed with a scikit-learn function named cosine_similarity, which assigns a value to every string (movie features) and then generate a squared matrix with values for every single movie where the more value, the more similarity between the movie.
 
-**Collaborative Filtering:** this model uses the surprise python library to get the SVD (Single Value Decomposition) between the watched movies by the user with his/her score and the other users watched movies and their score to that movies.
+**Collaborative Filtering:** this model uses the surprise python library to get the SVD (Single Value Decomposition) to train the model between the watched movies by the user with his/her score and the other users watched movies and their score to that movies.
 
 
 
